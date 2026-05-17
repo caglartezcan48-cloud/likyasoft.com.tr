@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /core/
+Disallow: /data/
+Disallow: /views/frontend/admin/
+
+Sitemap: https://likyapaydemo.gt.tc/sitemap.xml

@@ -1,0 +1,12 @@
+2026-02-16 18:27:52 - Error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'mazello.recycle_bin' doesn't exist
+#0 C:\Users\USER\Desktop\xammp\htdocs\MAZELLOMOBİLYA\api\teklif_islem.php(127): PDOStatement->execute(Array)
+#1 {main}
+2026-02-16 18:27:56 - Error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'mazello.recycle_bin' doesn't exist
+#0 C:\Users\USER\Desktop\xammp\htdocs\MAZELLOMOBİLYA\api\teklif_islem.php(127): PDOStatement->execute(Array)
+#1 {main}
+2026-02-16 18:28:12 - Error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'mazello.recycle_bin' doesn't exist
+#0 C:\Users\USER\Desktop\xammp\htdocs\MAZELLOMOBİLYA\api\teklif_islem.php(127): PDOStatement->execute(Array)
+#1 {main}
+2026-02-16 18:32:39 - Error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'mazello.recycle_bin' doesn't exist
+#0 C:\Users\USER\Desktop\xammp\htdocs\MAZELLOMOBİLYA\api\teklif_islem.php(127): PDOStatement->execute(Array)
+#1 {main}

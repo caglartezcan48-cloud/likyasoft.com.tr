@@ -1,0 +1,22 @@
+{
+  "name": "LikyaPay Finans",
+  "short_name": "LikyaPay",
+  "description": "Yeni Nesil Finansal Optimizasyon ve Mahsuplaşma Sistemi",
+  "start_url": "/index.php",
+  "display": "standalone",
+  "background_color": "#0c4a6e",
+  "theme_color": "#0c4a6e",
+  "icons": [
+    {
+      "src": "/views/frontend/gorsel/logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/views/frontend/gorsel/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
