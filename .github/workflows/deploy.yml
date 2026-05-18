@@ -1,0 +1,39 @@
+# .github/workflows/deploy.yml
+# GitHub Action to automatically deploy changes to Guzelnet server via FTP on every push to main.
+
+name: 🚀 Guzelnet Live FTP Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  web-deploy:
+    name: 🚚 Deploy Changed Files
+    runs-on: ubuntu-latest
+    steps:
+    
+    - name: ⬇️ Get Latest Code
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+
+    - name: 📤 FTP Deploy to Guzelnet
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      with:
+        server: ${{ secrets.FTP_SERVER }}
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        # Plesk default folder is /httpdocs/
+        server-dir: /httpdocs/
+        # Files to exclude from automatic uploading
+        exclude: |
+          **/.git*
+          **/.git*/**
+          **/.github*
+          **/.github*/**
+          **/node_modules/**
+          likyasoft_agency_update.zip
+          create_agency_zip.php
+          README.md
