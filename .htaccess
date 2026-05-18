@@ -1,6 +1,9 @@
 # Security & Performance - Likya Soft
 # Path: .htaccess
 
+# 1. Set index.php as the primary Directory Index for Apache
+DirectoryIndex index.php index.html
+
 Options -Indexes
 
 <IfModule mod_rewrite.c>
@@ -14,20 +17,16 @@ Options -Indexes
     RewriteRule \.(bak|sql|log|ini|sh|inc|swp|dist)$ - [F,L]
 </IfModule>
 
-# Custom Error Pages
-ErrorDocument 403 /index.php
-ErrorDocument 404 /index.php
-
 # ----------------------------------------------------------------------
 # | Performance Optimizations (Gzip & Caching)                         |
 # ----------------------------------------------------------------------
 
-# 1. Gzip Compression (Reduce file size sent to browser)
+# Gzip Compression (Reduce file size sent to browser)
 <IfModule mod_deflate.c>
   AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/x-javascript application/json application/xml
 </IfModule>
 
-# 2. Browser Caching (Speed up repeat visits)
+# Browser Caching (Speed up repeat visits)
 <IfModule mod_expires.c>
   ExpiresActive On
   
@@ -39,7 +38,7 @@ ErrorDocument 404 /index.php
   ExpiresByType image/webp "access plus 1 year"
   ExpiresByType image/svg+xml "access plus 1 year"
   
-  # CSS & JS (Cache for 1 month - PHP version keys handle updates instantly)
+  # CSS & JS (Cache for 1 month)
   ExpiresByType text/css "access plus 1 month"
   ExpiresByType text/javascript "access plus 1 month"
   ExpiresByType application/javascript "access plus 1 month"
