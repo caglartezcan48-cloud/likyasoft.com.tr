@@ -1,0 +1,46 @@
+# Security & Performance - Likya Soft
+# Path: .htaccess
+
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # Block access to database backups, raw logs, and traffic files (CRITICAL SECURITY)
+    RewriteRule ^visitor_count\.txt$ - [F,L]
+    RewriteRule ^uploads/client_inquiries\.json$ - [F,L]
+    RewriteRule ^\.git - [F,L]
+    RewriteRule ^\.gitignore$ - [F,L]
+    RewriteRule \.(bak|sql|log|ini|sh|inc|swp|dist)$ - [F,L]
+</IfModule>
+
+# Custom Error Pages
+ErrorDocument 403 /index.php
+ErrorDocument 404 /index.php
+
+# ----------------------------------------------------------------------
+# | Performance Optimizations (Gzip & Caching)                         |
+# ----------------------------------------------------------------------
+
+# 1. Gzip Compression (Reduce file size sent to browser)
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/x-javascript application/json application/xml
+</IfModule>
+
+# 2. Browser Caching (Speed up repeat visits)
+<IfModule mod_expires.c>
+  ExpiresActive On
+  
+  # Images (Cache for 1 year)
+  ExpiresByType image/jpg "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  
+  # CSS & JS (Cache for 1 month - PHP version keys handle updates instantly)
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType text/javascript "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+</IfModule>
