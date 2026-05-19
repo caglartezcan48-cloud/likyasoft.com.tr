@@ -14,7 +14,7 @@ window.Agency.About = ({ t }) => {
     };
 
     return (
-        <section id="about" className="relative py-24 overflow-hidden">
+        <section id="about" className="relative pt-10 pb-16 overflow-hidden">
             {/* Glowing HSL Neon Spots */}
             <div className="glow-spot w-[450px] h-[450px] bg-violet-600/5 bottom-12 -right-20"></div>
             <div className="glow-spot w-[350px] h-[350px] bg-cyber-blue/5 top-12 -left-20"></div>
@@ -22,7 +22,7 @@ window.Agency.About = ({ t }) => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 
                 {/* Section Header */}
-                <div className="text-center mb-20 flex flex-col items-center">
+                <div className="text-center mb-10 flex flex-col items-center">
                     <span className="text-xs tracking-widest font-black text-violet-400 uppercase mb-2">
                         {t.subtitle}
                     </span>

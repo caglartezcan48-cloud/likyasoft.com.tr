@@ -5,7 +5,7 @@ window.Agency = window.Agency || {};
 
 window.Agency.Products = ({ t }) => {
     return (
-        <section id="products" className="relative py-24 overflow-hidden">
+        <section id="products" className="relative pt-10 pb-16 overflow-hidden">
             {/* Background glowing spots */}
             <div className="glow-spot w-[500px] h-[500px] bg-violet-600/10 top-1/4 -right-20"></div>
             <div className="glow-spot w-[500px] h-[500px] bg-emerald-600/10 bottom-1/4 -left-20"></div>
@@ -13,7 +13,7 @@ window.Agency.Products = ({ t }) => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 
                 {/* Section Header */}
-                <div className="text-center mb-20 flex flex-col items-center">
+                <div className="text-center mb-10 flex flex-col items-center">
                     <span className="text-xs tracking-widest font-black text-violet-400 uppercase mb-2">
                         {t.subtitle}
                     </span>

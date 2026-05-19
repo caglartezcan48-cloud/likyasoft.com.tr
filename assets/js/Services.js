@@ -63,14 +63,14 @@ window.Agency.Services = ({ t }) => {
     };
 
     return (
-        <section id="services" className="relative py-24 bg-slate-950/40 border-y border-white/5 overflow-hidden">
+        <section id="services" className="relative pt-10 pb-16 bg-slate-950/40 border-y border-white/5 overflow-hidden">
             {/* Ambient Background Glow */}
             <div className="glow-spot w-[400px] h-[400px] bg-cyber-blue/5 bottom-12 -left-20"></div>
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 
                 {/* Section Header */}
-                <div className="text-center mb-20 flex flex-col items-center">
+                <div className="text-center mb-10 flex flex-col items-center">
                     <span className="text-xs tracking-widest font-black text-cyber-blue uppercase mb-2">
                         {t.subtitle}
                     </span>
