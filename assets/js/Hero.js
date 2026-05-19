@@ -69,7 +69,7 @@ window.Agency.Hero = ({ t }) => {
     };
 
     return (
-        <section className="relative pt-32 pb-24 md:pt-40 md:pb-36 overflow-hidden">
+        <section className="relative pt-[260px] pb-24 md:pt-[280px] md:pb-36 overflow-hidden">
             {/* Glowing HSL Neon Blobs */}
             <div className="glow-spot w-[350px] h-[350px] bg-violet-600/15 top-1/4 -left-36"></div>
             <div className="glow-spot w-[450px] h-[450px] bg-cyber-blue/10 top-1/3 -right-36"></div>

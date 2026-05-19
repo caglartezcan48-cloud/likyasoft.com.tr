@@ -51,7 +51,7 @@ window.Agency.Navbar = ({ activeSection, lang, setLang, t }) => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between">
                     {/* Brand Logo */}
-                    <div className="flex items-end gap-3 cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+                    <div className="flex items-center gap-3 cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
                         <img src="logo.png" alt="Likya Soft" className="h-[216px] w-auto object-contain drop-shadow-[0_0_18px_rgba(139,92,246,0.4)]" />
                         <div className="flex flex-col">
                             <span className="font-extrabold text-lg sm:text-xl tracking-tight text-white flex items-center gap-1.5">
