@@ -32,7 +32,7 @@ window.Agency.Navbar = ({ activeSection, lang, setLang, t }) => {
         setMobileOpen(false);
         const element = document.getElementById(id);
         if (element) {
-            const offset = 80;
+            const offset = 120;
             const bodyRect = document.body.getBoundingClientRect().top;
             const elementRect = element.getBoundingClientRect().top;
             const elementPosition = elementRect - bodyRect;
@@ -53,7 +53,7 @@ window.Agency.Navbar = ({ activeSection, lang, setLang, t }) => {
                 <div className="flex items-center justify-between">
                     {/* Brand Logo */}
                     <div className="flex items-center gap-3 cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-                        <img src="logo.png" alt="Likya Soft" className="h-[216px] w-auto object-contain drop-shadow-[0_0_18px_rgba(139,92,246,0.4)]" />
+                        <img src="logo.png" alt="Likya Soft" className={`${scrolled ? 'h-[64px]' : 'h-[180px]'} w-auto object-contain transition-all duration-500 drop-shadow-[0_0_18px_rgba(139,92,246,0.4)]`} />
                         <div className="flex flex-col">
                             <span className="font-extrabold text-lg sm:text-xl tracking-tight text-white flex items-center gap-1.5">
                                 LİKYA <span className="text-gradient-purple font-black">SOFT</span>
