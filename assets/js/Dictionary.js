@@ -106,31 +106,36 @@ window.Agency.Dictionary = {
                     title: "Fethiye360 Bölgesel Portalı",
                     category: "web",
                     desc: "Fethiye bölgesinin tüm turizm, işletme ve rehberlik ihtiyaçlarını tek bir adreste birleştiren, yüksek performanslı şehir bilgi sistemi.",
-                    badge: "Bölgesel Teknoloji"
+                    badge: "Bölgesel Teknoloji",
+                    image: "portfolio/fethiye360.jpg"
                 },
                 {
                     title: "Mazello Enterprise ERP",
                     category: "erp",
                     desc: "Üretim ve lojistik firmaları için özel geliştirilmiş, 50+ aktif modüle sahip bulut tabanlı ERP yazılım paketi.",
-                    badge: "Enterprise SaaS"
+                    badge: "Enterprise SaaS",
+                    image: "portfolio/mazello_erp.jpg"
                 },
                 {
                     title: "LikyaPay Finansal Optimizasyon",
                     category: "ai",
                     desc: "Sirius yapay zeka motoru ile milyonlarca liralık borç zincirini nakit akışına ihtiyaç duymadan kapatan finansal teknoloji devrimi.",
-                    badge: "FinTech"
+                    badge: "FinTech",
+                    image: "portfolio/likyapay_fintech.jpg"
                 },
                 {
                     title: "No Made Kasap Otomasyonu",
                     category: "custom",
                     desc: "Gıda ve perakende zincirleri için entegre tartı, stok, anlık satış ve muhasebe takip yazılımı.",
-                    badge: "Retail Software"
+                    badge: "Retail Software",
+                    image: "portfolio/no_made_butcher.jpg"
                 },
                 {
                     title: "Çiçek E-Ticaret Ağı",
                     category: "web",
                     desc: "Gelişmiş kurye takip, lokasyon bazlı teslimat ve abonelik modelleri barındıran yeni nesil e-ticaret altyapısı.",
-                    badge: "Next-Gen E-Commerce"
+                    badge: "Next-Gen E-Commerce",
+                    image: "portfolio/cicek_ecommerce.jpg"
                 }
             ]
         },
@@ -317,31 +322,36 @@ window.Agency.Dictionary = {
                     title: "Fethiye360 Regional Hub",
                     category: "web",
                     desc: "A highly optimized tourism, business directory, and smart city info portal integrating Fethiye's entire regional landscape.",
-                    badge: "Smart Regional Portal"
+                    badge: "Smart Regional Portal",
+                    image: "portfolio/fethiye360.jpg"
                 },
                 {
                     title: "Mazello Enterprise ERP Pack",
                     category: "erp",
                     desc: "Cloud ERP system boasting 50+ custom modules tailored explicitly for manufacturing and logistics firms.",
-                    badge: "Enterprise SaaS"
+                    badge: "Enterprise SaaS",
+                    image: "portfolio/mazello_erp.jpg"
                 },
                 {
                     title: "LikyaPay Fintech Breakthrough",
                     category: "ai",
                     desc: "FinTech revolution resolving millions of liras of circular debts completely without cash using Sirius AI engine.",
-                    badge: "FinTech Platform"
+                    badge: "FinTech Platform",
+                    image: "portfolio/likyapay_fintech.jpg"
                 },
                 {
                     title: "No Made Butcher Automation",
                     category: "custom",
                     desc: "Tailored retail software integrating digital scales, real-time sales tracking, stock counts, and light billing.",
-                    badge: "Retail Software"
+                    badge: "Retail Software",
+                    image: "portfolio/no_made_butcher.jpg"
                 },
                 {
                     title: "Cicek E-Commerce Network",
                     category: "web",
                     desc: "Next-gen localized flower delivery and subscription e-commerce engine with live driver tracking.",
-                    badge: "E-Commerce Infrastructure"
+                    badge: "E-Commerce Infrastructure",
+                    image: "portfolio/cicek_ecommerce.jpg"
                 }
             ]
         },

@@ -78,6 +78,14 @@ window.Agency.Portfolio = ({ t }) => {
                                 style={{ animationDelay: `${index * 0.05}s` }}
                             >
                                 <div>
+                                    {/* Project Image */}
+                                    {item.image && (
+                                        <div className="w-full h-44 rounded-xl overflow-hidden mb-6 relative">
+                                            <img src={item.image} alt={item.title} className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500" />
+                                            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+                                        </div>
+                                    )}
+                                    
                                     {/* Card Icon Header */}
                                     <div className="flex justify-between items-center mb-6">
                                         <div className={`w-10 h-10 rounded-xl border flex items-center justify-center shadow-lg ${iconClasses}`}>
