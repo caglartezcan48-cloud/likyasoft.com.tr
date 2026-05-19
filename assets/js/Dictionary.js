@@ -10,6 +10,7 @@ window.Agency.Dictionary = {
             products: "Ürünlerimiz",
             portfolio: "Portfolyo",
             about: "Kurumsal",
+            pricing: "Fiyatlandırma",
             contact: "İletişim",
             quote: "Hızlı Teklif",
             lang: "EN"
@@ -226,6 +227,7 @@ window.Agency.Dictionary = {
             products: "Products",
             portfolio: "Portfolio",
             about: "Corporate",
+            pricing: "Pricing",
             contact: "Contact",
             quote: "Get Quote",
             lang: "TR"

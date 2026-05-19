@@ -24,6 +24,7 @@ window.Agency.Navbar = ({ activeSection, lang, setLang, t }) => {
         { id: 'products', label: t.products },
         { id: 'portfolio', label: t.portfolio },
         { id: 'about', label: t.about },
+        { id: 'pricing', label: t.pricing },
         { id: 'contact', label: t.contact }
     ];
 

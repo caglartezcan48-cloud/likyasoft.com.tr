@@ -89,7 +89,7 @@ window.Agency.Contact = ({ t }) => {
         });
 
         // Scroll to form inputs
-        const formElement = document.getElementById('contact-form-inputs');
+        const formElement = document.getElementById('contact');
         if (formElement) {
             formElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
@@ -120,7 +120,7 @@ window.Agency.Contact = ({ t }) => {
     };
 
     return (
-        <section id="contact" className="relative py-24 bg-slate-950/40 border-t border-white/5 overflow-hidden">
+        <section id="pricing" className="relative py-24 bg-slate-950/40 border-t border-white/5 overflow-hidden">
             {/* Background Glow Spots */}
             <div className="glow-spot w-[450px] h-[450px] bg-cyber-blue/5 top-1/4 -right-20"></div>
             <div className="glow-spot w-[350px] h-[350px] bg-violet-600/5 bottom-12 -left-20"></div>
@@ -257,7 +257,7 @@ window.Agency.Contact = ({ t }) => {
                 </div>
 
                 {/* 2. CONTACT DETAILS & MESSAGE FORM SPLIT */}
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch" id="contact-form-inputs">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch pt-24 mt-12 border-t border-white/5" id="contact">
                     
                     {/* Left: Contact Info (4 cols) */}
                     <div className="lg:col-span-4 flex flex-col justify-between space-y-8">

@@ -12,7 +12,7 @@ window.Agency.App = () => {
 
     // IntersectionObserver to set active navigation item based on scrolling
     React.useEffect(() => {
-        const sections = ['services', 'products', 'portfolio', 'about', 'contact'];
+        const sections = ['services', 'products', 'portfolio', 'about', 'pricing', 'contact'];
         const observers = [];
 
         const observerOptions = {
