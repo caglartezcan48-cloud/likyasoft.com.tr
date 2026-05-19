@@ -50,12 +50,16 @@ function getAssetVer($path) {
     <meta property="og:url" content="https://likyasoft.com.tr/">
     <meta property="og:image" content="logo.png">
     
-    <!-- Fonts & Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Preconnect for faster Font Loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
-    <!-- Tailwind CSS (loaded safely via CDN) -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Fonts & Icons (Deferred) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    
+    <!-- Tailwind CSS (loaded safely via CDN, Deferred) -->
+    <script src="https://cdn.tailwindcss.com" defer></script>
     <script>
         tailwind.config = {
             theme: {
@@ -80,18 +84,18 @@ function getAssetVer($path) {
         }
     </script>
     
-    <!-- Global CSS stylesheet -->
-    <link rel="stylesheet" href="assets/css/agency.css?v=<?= getAssetVer('assets/css/agency.css') ?>">
+    <!-- Global CSS stylesheet (Deferred) -->
+    <link rel="stylesheet" href="assets/css/agency.css?v=<?= getAssetVer('assets/css/agency.css') ?>" media="print" onload="this.media='all'">
     
     <!-- Inject visitor count into JS global context -->
     <script>
         window.VISITOR_COUNT = <?= $currentCount ?>;
     </script>
     
-    <!-- React & Babel CDNs -->
-    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
-    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- React & Babel CDNs (Deferred) -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js" defer></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" defer></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js" defer></script>
 </head>
 <body class="bg-slate-950 text-slate-100 font-sans">
     
