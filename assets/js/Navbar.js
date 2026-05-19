@@ -52,9 +52,9 @@ window.Agency.Navbar = ({ activeSection, lang, setLang, t }) => {
                 <div className="flex items-center justify-between">
                     {/* Brand Logo */}
                     <div className="flex items-center gap-3 cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-                        <div className="bg-gradient-to-tr from-violet-600 to-cyber-blue p-0.5 rounded-xl shadow-lg shadow-violet-500/20">
-                            <div className="bg-slate-950 p-2 rounded-[10px]">
-                                <img src="logo.png" alt="Likya Soft" className="h-6 w-auto object-contain" />
+                        <div className="bg-gradient-to-tr from-violet-600 to-cyber-blue p-0.5 rounded-2xl shadow-lg shadow-violet-500/20">
+                            <div className="bg-slate-950 p-3 rounded-[14px]">
+                                <img src="logo.png" alt="Likya Soft" className="h-[72px] w-auto object-contain" />
                             </div>
                         </div>
                         <div className="flex flex-col">
