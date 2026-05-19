@@ -16,25 +16,7 @@ window.Agency.Hero = ({ t }) => {
         }));
     }, []);
 
-    // Visitor counter count-up animation
-    const targetCount = window.VISITOR_COUNT || 5429;
-    const [count, setCount] = React.useState(Math.max(0, targetCount - 70));
 
-    React.useEffect(() => {
-        let start = Math.max(0, targetCount - 70);
-        const duration = 2000; // 2 seconds
-        const stepTime = Math.abs(Math.floor(duration / 70));
-        
-        const timer = setInterval(() => {
-            start += 1;
-            setCount(start);
-            if (start >= targetCount) {
-                clearInterval(timer);
-            }
-        }, stepTime);
-
-        return () => clearInterval(timer);
-    }, [targetCount]);
 
     const scrollToContact = () => {
         const element = document.getElementById('contact');
@@ -136,48 +118,45 @@ window.Agency.Hero = ({ t }) => {
                         </div>
                     </div>
 
-                    {/* Hero Right Content: Visitor Counter Panel */}
-                    <div className="lg:col-span-5 flex justify-center w-full">
-                        <div className="relative w-full max-w-[380px] p-0.5 bg-gradient-to-br from-white/10 via-white/5 to-white/0 rounded-3xl shadow-2xl shadow-black/80">
-                            
-                            {/* Inner Container */}
-                            <div className="bg-slate-950/80 backdrop-blur-xl p-8 rounded-[22px] border border-white/5 relative overflow-hidden flex flex-col items-center">
-                                {/* Ambient Light behind Counter */}
-                                <div className="absolute -top-12 -left-12 w-24 h-24 bg-cyber-blue/20 rounded-full blur-2xl"></div>
-                                <div className="absolute -bottom-12 -right-12 w-24 h-24 bg-violet-600/20 rounded-full blur-2xl"></div>
-
-                                {/* Artificial Intelligence Core Pulse Icon */}
-                                <div className="w-16 h-16 rounded-2xl bg-cyber-blue/10 border border-cyber-blue/20 flex items-center justify-center mb-6 pulse-ring-element relative">
-                                    <i className="fa-solid fa-microchip text-2xl text-cyber-blue"></i>
+                    {/* Hero Right Content: Image Collage */}
+                    <div className="lg:col-span-5 flex justify-center items-center w-full relative">
+                        {/* Ambient glow */}
+                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-violet-600/20 rounded-full blur-3xl -z-10"></div>
+                        
+                        <div className="w-full max-w-[460px] flex flex-col gap-4">
+                            {/* Top Large Image */}
+                            <div className="w-full h-[260px] rounded-2xl overflow-hidden border border-white/10 shadow-2xl shadow-black/80 relative group">
+                                <img src="assets/images/hero_large.jpg" alt="Software Development" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-900/20 to-transparent"></div>
+                                <div className="absolute bottom-4 left-4 flex items-center gap-3">
+                                    <div className="w-10 h-10 rounded-xl bg-cyber-blue/20 backdrop-blur border border-cyber-blue/30 flex items-center justify-center">
+                                        <i className="fa-solid fa-laptop-code text-cyber-blue text-sm"></i>
+                                    </div>
+                                    <span className="text-white font-extrabold text-sm sm:text-base tracking-wide">Özel Yazılım Çözümleri</span>
                                 </div>
+                            </div>
 
-                                <span className="text-[10px] tracking-widest font-black text-cyber-blue mb-1 uppercase">
-                                    {t.counter_prefix}
-                                </span>
-
-                                {/* Counter Display Panel */}
-                                <div className="flex gap-1.5 py-4 px-6 bg-slate-900/80 border border-white/5 rounded-2xl mb-4 font-mono shadow-inner">
-                                    {String(count).padStart(5, '0').split('').map((char, index) => (
-                                        <div 
-                                            key={index}
-                                            className="w-8 h-12 rounded-lg bg-gradient-to-b from-slate-950 to-slate-900 border border-white/5 flex items-center justify-center text-2xl font-black text-white shadow shadow-black/50"
-                                        >
-                                            {char}
+                            {/* Bottom 2 Small Images */}
+                            <div className="grid grid-cols-2 gap-4">
+                                <div className="h-[160px] rounded-2xl overflow-hidden border border-white/10 shadow-xl relative group">
+                                    <img src="assets/images/hero_small_1.jpg" alt="Web Development" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-900/20 to-transparent"></div>
+                                    <div className="absolute bottom-3 left-3 flex items-center gap-2">
+                                        <div className="w-7 h-7 rounded-lg bg-violet-500/20 backdrop-blur border border-violet-500/30 flex items-center justify-center">
+                                            <i className="fa-solid fa-code text-violet-400 text-xs"></i>
                                         </div>
-                                    ))}
+                                        <span className="text-slate-200 font-bold text-xs">Web Teknolojileri</span>
+                                    </div>
                                 </div>
-
-                                <h4 className="font-bold text-white text-base mb-1.5 text-center">
-                                    {t.counter_title}
-                                </h4>
-                                
-                                <p className="text-xs text-slate-400 text-center leading-relaxed max-w-[240px]">
-                                    {t.counter_desc}
-                                </p>
-
-                                {/* Verification Tag */}
-                                <div className="mt-6 flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/25 text-[10px] font-bold text-emerald-400 uppercase tracking-wider">
-                                    <i className="fa-solid fa-circle-check text-emerald-400"></i> SIRIUS AI VERIFIED
+                                <div className="h-[160px] rounded-2xl overflow-hidden border border-white/10 shadow-xl relative group">
+                                    <img src="assets/images/hero_small_2.jpg" alt="UI/UX Design" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-900/20 to-transparent"></div>
+                                    <div className="absolute bottom-3 left-3 flex items-center gap-2">
+                                        <div className="w-7 h-7 rounded-lg bg-emerald-500/20 backdrop-blur border border-emerald-500/30 flex items-center justify-center">
+                                            <i className="fa-solid fa-pen-nib text-emerald-400 text-xs"></i>
+                                        </div>
+                                        <span className="text-slate-200 font-bold text-xs">UI / UX Tasarım</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
