@@ -126,7 +126,7 @@ window.Agency.Hero = ({ t }) => {
                         <div className="w-full max-w-[460px] flex flex-col gap-4">
                             {/* Top Large Image */}
                             <div className="w-full h-[260px] rounded-2xl overflow-hidden border border-white/10 shadow-2xl shadow-black/80 relative group">
-                                <img src="assets/images/hero_large.jpg" alt="Software Development" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                                <img src="assets/images/hero_large.webp" alt="Software Development" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-900/20 to-transparent"></div>
                                 <div className="absolute bottom-4 left-4 flex items-center gap-3">
                                     <div className="w-10 h-10 rounded-xl bg-cyber-blue/20 backdrop-blur border border-cyber-blue/30 flex items-center justify-center">
@@ -139,7 +139,7 @@ window.Agency.Hero = ({ t }) => {
                             {/* Bottom 2 Small Images */}
                             <div className="grid grid-cols-2 gap-4">
                                 <div className="h-[160px] rounded-2xl overflow-hidden border border-white/10 shadow-xl relative group">
-                                    <img src="assets/images/hero_small_1.jpg" alt="Web Development" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                                    <img src="assets/images/hero_small_1.webp" alt="Web Development" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                                     <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-900/20 to-transparent"></div>
                                     <div className="absolute bottom-3 left-3 flex items-center gap-2">
                                         <div className="w-7 h-7 rounded-lg bg-violet-500/20 backdrop-blur border border-violet-500/30 flex items-center justify-center">
@@ -149,7 +149,7 @@ window.Agency.Hero = ({ t }) => {
                                     </div>
                                 </div>
                                 <div className="h-[160px] rounded-2xl overflow-hidden border border-white/10 shadow-xl relative group">
-                                    <img src="assets/images/hero_small_2.jpg" alt="UI/UX Design" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                                    <img src="assets/images/hero_small_2.webp" alt="UI/UX Design" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                                     <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-900/20 to-transparent"></div>
                                     <div className="absolute bottom-3 left-3 flex items-center gap-2">
                                         <div className="w-7 h-7 rounded-lg bg-emerald-500/20 backdrop-blur border border-emerald-500/30 flex items-center justify-center">

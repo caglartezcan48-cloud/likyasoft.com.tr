@@ -35,35 +35,35 @@ window.Agency.Dictionary = {
                 {
                     title: "Özel Yazılım Geliştirme",
                     desc: "İhtiyaçlarınıza özel, ölçeklenebilir, yüksek performanslı SaaS platformları, veritabanı yönetim sistemleri ve güvenli backend mimarileri kodluyoruz.",
-                    image: "services/software_dev_luxury_1776938240996.png",
+                    image: "services/software_dev_luxury_1776938240996_compressed.jpg",
                     color: "violet",
                     features: ["Bulut Mimarisi", "Ölçeklenebilir Kod", "Yüksek Güvenlik"]
                 },
                 {
                     title: "Kurumsal Web Tasarım",
                     desc: "Markanızı zirveye taşıyacak, üst düzey UX/UI standartlarında tasarlanmış, ultra hızlı, mobil uyumlu ve ödüllük arayüze sahip web siteleri üretiyoruz.",
-                    image: "services/web_design_luxury_1776938272240.png",
+                    image: "services/web_design_luxury_1776938272240_compressed.jpg",
                     color: "cyber",
                     features: ["Ultra Hızlı Sayfalar", "Modern UI/UX", "SEO Altyapısı"]
                 },
                 {
                     title: "ERP & CRM Sistemleri",
                     desc: "Tüm finans, stok, teklif, müşteri ilişkileri ve operasyonel süreçlerinizi tek merkezden koordine eden üst düzey Mazello ERP altyapıları kuruyoruz.",
-                    image: "services/erp_management_luxury_1776938301499.png",
+                    image: "services/erp_management.webp",
                     color: "emerald",
                     features: ["Stok & Finans", "Gelişmiş Raporlama", "Süreç Otomasyonu"]
                 },
                 {
                     title: "Yapay Zeka & Otomasyon",
                     desc: "Yapay zeka algoritmaları, veri madenciliği, karar verici botlar ve otomasyon mekanizmaları (Sirius AI benzeri) geliştirerek operasyonel yüklerinizi sıfırlıyoruz.",
-                    image: "services/ai_solutions_luxury_1776938256483.png",
+                    image: "services/ai_solutions.webp",
                     color: "rose",
                     features: ["Sirius Eşleme Motoru", "Veri Analitiği", "Akıllı Botlar"]
                 },
                 {
                     title: "SEO & Performans Optimizasyonu",
                     desc: "Arama motorlarında üst sıralarda yer almanız için ileri düzey teknik SEO, içerik stratejisi ve sunucu tarafı hız optimizasyonları sağlıyoruz.",
-                    image: "services/seo_performance_luxury_1776938289341.png",
+                    image: "services/seo_performance.webp",
                     color: "yellow",
                     features: ["Core Web Vitals", "Semantik SEO", "Sunucu Hızlandırma"]
                 }
@@ -108,35 +108,35 @@ window.Agency.Dictionary = {
                     category: "web",
                     desc: "Fethiye bölgesinin tüm turizm, işletme ve rehberlik ihtiyaçlarını tek bir adreste birleştiren, yüksek performanslı şehir bilgi sistemi.",
                     badge: "Bölgesel Teknoloji",
-                    image: "portfolio/fethiye360.jpg"
+                    image: "portfolio/fethiye360.webp"
                 },
                 {
                     title: "Mazello Enterprise ERP",
                     category: "erp",
                     desc: "Üretim ve lojistik firmaları için özel geliştirilmiş, 50+ aktif modüle sahip bulut tabanlı ERP yazılım paketi.",
                     badge: "Enterprise SaaS",
-                    image: "portfolio/mazello_erp.jpg"
+                    image: "portfolio/mazello_erp.webp"
                 },
                 {
                     title: "LikyaPay Finansal Optimizasyon",
                     category: "ai",
                     desc: "Sirius yapay zeka motoru ile milyonlarca liralık borç zincirini nakit akışına ihtiyaç duymadan kapatan finansal teknoloji devrimi.",
                     badge: "FinTech",
-                    image: "portfolio/likyapay_fintech.jpg"
+                    image: "portfolio/likyapay_fintech.webp"
                 },
                 {
                     title: "No Made Kasap Otomasyonu",
                     category: "custom",
                     desc: "Gıda ve perakende zincirleri için entegre tartı, stok, anlık satış ve muhasebe takip yazılımı.",
                     badge: "Retail Software",
-                    image: "portfolio/no_made_butcher.jpg"
+                    image: "portfolio/no_made_butcher.webp"
                 },
                 {
                     title: "Çiçek E-Ticaret Ağı",
                     category: "web",
                     desc: "Gelişmiş kurye takip, lokasyon bazlı teslimat ve abonelik modelleri barındıran yeni nesil e-ticaret altyapısı.",
                     badge: "Next-Gen E-Commerce",
-                    image: "portfolio/cicek_ecommerce.jpg"
+                    image: "portfolio/cicek_ecommerce.webp"
                 }
             ]
         },
@@ -252,35 +252,35 @@ window.Agency.Dictionary = {
                 {
                     title: "Custom Software Development",
                     desc: "We develop customized, scalable, high-performance SaaS applications, custom database structures, and secure backend systems tailored to your business.",
-                    image: "services/software_dev_luxury_1776938240996.png",
+                    image: "services/software_dev_luxury_1776938240996_compressed.jpg",
                     color: "violet",
                     features: ["Cloud Architecture", "Scalable Codebase", "Military-Grade Security"]
                 },
                 {
                     title: "Premium Web Design",
                     desc: "We design and build award-winning UI/UX websites that are ultra-fast, fully responsive, and SEO-ready to position your brand at the absolute peak.",
-                    image: "services/web_design_luxury_1776938272240.png",
+                    image: "services/web_design_luxury_1776938272240_compressed.jpg",
                     color: "cyber",
                     features: ["Ultra Fast Loading", "Modern UI/UX Designs", "SEO Infrastructure"]
                 },
                 {
                     title: "ERP & CRM Systems",
                     desc: "We establish advanced Mazello ERP architectures that coordinate your finances, warehouse stock, sales offers, and operational processes from a single screen.",
-                    image: "services/erp_management_luxury_1776938301499.png",
+                    image: "services/erp_management.webp",
                     color: "emerald",
                     features: ["Stok & Financials", "Advanced Reports", "Process Automations"]
                 },
                 {
                     title: "AI & Automation",
                     desc: "We minimize your operational costs by coding custom machine learning algorithms, database decision-making bots, and mathematical networks (similar to Sirius AI).",
-                    image: "services/ai_solutions_luxury_1776938256483.png",
+                    image: "services/ai_solutions.webp",
                     color: "rose",
                     features: ["Sirius Matching Engine", "Data Analytics", "Intelligent Bots"]
                 },
                 {
                     title: "SEO & Speed Optimization",
                     desc: "We provide high-end technical SEO, semantic contents planning, and server-side optimizations to ensure your brand ranks top in search engines.",
-                    image: "services/seo_performance_luxury_1776938289341.png",
+                    image: "services/seo_performance.webp",
                     color: "yellow",
                     features: ["Core Web Vitals", "Semantic SEO", "Server Acceleration"]
                 }
@@ -325,35 +325,35 @@ window.Agency.Dictionary = {
                     category: "web",
                     desc: "A highly optimized tourism, business directory, and smart city info portal integrating Fethiye's entire regional landscape.",
                     badge: "Smart Regional Portal",
-                    image: "portfolio/fethiye360.jpg"
+                    image: "portfolio/fethiye360.webp"
                 },
                 {
                     title: "Mazello Enterprise ERP Pack",
                     category: "erp",
                     desc: "Cloud ERP system boasting 50+ custom modules tailored explicitly for manufacturing and logistics firms.",
                     badge: "Enterprise SaaS",
-                    image: "portfolio/mazello_erp.jpg"
+                    image: "portfolio/mazello_erp.webp"
                 },
                 {
                     title: "LikyaPay Fintech Breakthrough",
                     category: "ai",
                     desc: "FinTech revolution resolving millions of liras of circular debts completely without cash using Sirius AI engine.",
                     badge: "FinTech Platform",
-                    image: "portfolio/likyapay_fintech.jpg"
+                    image: "portfolio/likyapay_fintech.webp"
                 },
                 {
                     title: "No Made Butcher Automation",
                     category: "custom",
                     desc: "Tailored retail software integrating digital scales, real-time sales tracking, stock counts, and light billing.",
                     badge: "Retail Software",
-                    image: "portfolio/no_made_butcher.jpg"
+                    image: "portfolio/no_made_butcher.webp"
                 },
                 {
                     title: "Cicek E-Commerce Network",
                     category: "web",
                     desc: "Next-gen localized flower delivery and subscription e-commerce engine with live driver tracking.",
                     badge: "E-Commerce Infrastructure",
-                    image: "portfolio/cicek_ecommerce.jpg"
+                    image: "portfolio/cicek_ecommerce.webp"
                 }
             ]
         },
