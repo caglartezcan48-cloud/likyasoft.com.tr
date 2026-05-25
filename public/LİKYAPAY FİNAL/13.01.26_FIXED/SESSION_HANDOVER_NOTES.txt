@@ -1,0 +1,24 @@
+# 📋 GELECEK AGENT İÇİN DEVİR NOTLARI (8 OCAK 2026)
+
+## ✅ Başarılanlar
+1.  **Giriş Sistemi:** Kullanıcı Adı, E-Posta veya Telefon ile esnek giriş eklendi ve çalışıyor (`login.php`).
+2.  **Sirius Onayı:** "E-İmza Servisi Yok" hatası giderildi. Onaylar artık simüle ediliyor ve sorunsuz çalışıyor (`sirius.php`).
+3.  **Evrak Arşivi:** "Bu döngüde yoksun" hatası (String/Int uyuşmazlığı ve TaxID eksikliği) giderildi. Sözleşme ve Fatura indirme sorunsuz (`Archive.js`, `sirius.php`).
+
+## 🚧 Yarım Kalan / Sorunlu Kısım (ÖNEMLİ)
+**Görev:** Ana sayfaya "Tanıtım Videosu" butonu ve video bölümü eklemek.
+**Durum:** 
+- `HeroSection.js` ve `HomePage.js` dosyalarına kodlar eklendi (Kırmızı buton ve Video Section).
+- Ancak kullanıcı sunucuya yüklediğinde **değişiklikleri göremedi.**
+
+**Muhtemel Sebep (Çözüm İpucu):**
+- Büyük ihtimalle tarayıcı önbelleği (Cache) eski JS dosyalarını okumaya devam ediyor.
+- `views/home.php` dosyasındaki JS import satırlarının versiyonu güncellenmedi (Örn: `src="frontend/anasayfa/HeroSection.js?v=2005"`).
+- **YAPILACAK İLK İŞ:** `home.php` içindeki script versiyon numaralarını artırmak (örn: `v=2006`) ve dosyaları tekrar yükletmek.
+
+## 📂 Dosyalar
+- Video Dosyası: `likyapay/views/frontend/gorsel/tanitim.mp4` (Yüklendi)
+- Güncel Kodlar: `frontend/anasayfa/HomePage.js` ve `HeroSection.js` içinde hazır.
+
+---
+**Kullanıcı Notu:** "Yarın videoyu ana sayfada, butonun yanında ve aşağıda açılır şekilde görmek istiyorum."

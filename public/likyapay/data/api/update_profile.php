@@ -1,0 +1,123 @@
+<?php
+// Update Profile API
+// Path: data/api/update_profile.php
+
+include_once '../../core/database.php';
+include_once '../../core/cors.php';
+
+header('Content-Type: application/json');
+handleCors();
+session_start();
+
+// Security: User must be logged in
+if (!isset($_SESSION['user_id'])) {
+    http_response_code(401);
+    echo json_encode(["success" => false, "message" => "Oturum açmanız gerekiyor."]);
+    exit;
+}
+
+try {
+    $database = new Database();
+    $db = $database->getConnection();
+    $data = json_decode(file_get_contents("php://input"));
+    $user_id = $_SESSION['user_id'];
+
+    // --- DEBUG LOG START ---
+    $debugFile = __DIR__ . '/debug_update.txt';
+    $log = "\n[" . date('Y-m-d H:i:s') . "] User: $user_id\n";
+    $log .= "Received Raw: " . file_get_contents("php://input") . "\n";
+    $log .= "Decoded: " . print_r($data, true) . "\n";
+    // -----------------------
+
+    // Fields allowed to be updated by the user
+    $fields = [];
+    $params = [':id' => $user_id];
+
+    if (!empty($data->email)) {
+        // Optional: Check email uniqueness if changed
+        $fields[] = "email = :email";
+        $params[':email'] = $data->email;
+    }
+    if (!empty($data->phone)) {
+        $fields[] = "phone = :phone";
+        $params[':phone'] = $data->phone;
+    }
+    if (!empty($data->invoice_address)) {
+        $fields[] = "invoice_address = :invoice_address";
+        $params[':invoice_address'] = $data->invoice_address;
+    }
+    if (!empty($data->authorized_person)) {
+        $fields[] = "authorized_person = :authorized_person";
+        $params[':authorized_person'] = $data->authorized_person;
+    }
+    // Official Company Details
+    if (!empty($data->address)) {
+        $fields[] = "address = :address";
+        $params[':address'] = $data->address;
+    }
+    if (!empty($data->tax_office)) {
+        $fields[] = "tax_office = :tax_office";
+        $params[':tax_office'] = $data->tax_office;
+    }
+    if (!empty($data->mersis_no)) {
+        $fields[] = "mersis_no = :mersis_no";
+        $params[':mersis_no'] = $data->mersis_no;
+    }
+    if (!empty($data->trade_registry_no)) {
+        $fields[] = "trade_registry_no = :trade_registry_no";
+        $params[':trade_registry_no'] = $data->trade_registry_no;
+    }
+    if (!empty($data->city)) {
+        $fields[] = "city = :city";
+        $params[':city'] = $data->city;
+    }
+    if (!empty($data->district)) {
+        $fields[] = "district = :district";
+        $params[':district'] = $data->district;
+    }
+    if (!empty($data->iban)) {
+        $fields[] = "iban = :iban";
+        $params[':iban'] = $data->iban;
+    }
+
+    // Password Change Logic
+    if (!empty($data->new_password)) {
+        if (empty($data->current_password)) {
+            throw new Exception("Şifre değiştirmek için mevcut şifrenizi girmelisiniz.");
+        }
+        
+        // Verify current password first
+        $stmt = $db->prepare("SELECT password FROM users WHERE id = :id");
+        $stmt->execute([':id' => $user_id]);
+        $user = $stmt->fetch(PDO::FETCH_ASSOC);
+        
+        if (!$user || !password_verify($data->current_password, $user['password'])) {
+            throw new Exception("Mevcut şifreniz hatalı.");
+        }
+        
+        $fields[] = "password = :password";
+        $params[':password'] = password_hash($data->new_password, PASSWORD_BCRYPT);
+    }
+
+    if (empty($fields)) {
+        throw new Exception("Değişiklik yapılmadı.");
+    }
+
+    $sql = "UPDATE users SET " . implode(', ', $fields) . " WHERE id = :id";
+    $stmt = $db->prepare($sql);
+    
+    if ($stmt->execute($params)) {
+        // Log Success
+        file_put_contents($debugFile, $log . "SQL: $sql\nParams: " . print_r($params, true) . "\nResult: SUCCESS\n----------------\n", FILE_APPEND);
+        echo json_encode(["success" => true, "message" => "Profiliniz güncellendi."]);
+    } else {
+        // Log Failure
+        file_put_contents($debugFile, $log . "SQL: $sql\nParams: " . print_r($params, true) . "\nResult: FAILURE\n----------------\n", FILE_APPEND);
+        throw new Exception("Güncelleme başarısız.");
+    }
+
+} catch (Exception $e) {
+    http_response_code(500);
+    echo json_encode(["success" => false, "message" => $e->getMessage()]);
+}
+?>

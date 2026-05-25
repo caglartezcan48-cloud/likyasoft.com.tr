@@ -1,0 +1,63 @@
+# Security & Routing
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # 1. Force HTTPS (Optional - depends on InfinityFree SSL)
+    # RewriteCond %{HTTPS} off
+    # RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+    # 2. Block access to sensitive files (CRITICAL SECURITY)
+    RewriteRule ^core/ - [F,L]
+    RewriteRule ^brain/ - [F,L]
+    RewriteRule ^\.agent/ - [F,L]
+    RewriteRule ^composer\.(json|lock)$ - [F,L]
+    RewriteRule ^package(-lock)?\.json$ - [F,L]
+    RewriteRule ^\.env$ - [F,L]
+    RewriteRule ^\.git - [F,L]
+    RewriteRule \.(bak|sql|log|ini|sh|inc|swp|dist)$ - [F,L]
+    
+    # Block access to specific API folder listings if not needed directly
+    RewriteRule ^data/api/$ - [F,L]
+
+    # 3. Routing (if using a router in index.php)
+    # RewriteCond %{REQUEST_FILENAME} !-f
+    # RewriteCond %{REQUEST_FILENAME} !-d
+    # RewriteRule ^(.*)$ index.php [L,QSA]
+</IfModule>
+
+# Custom Error Pages
+ErrorDocument 403 /404.html
+ErrorDocument 404 /404.html
+
+# ----------------------------------------------------------------------
+# | Performance Optimizations (Gzip & Caching)                         |
+# ----------------------------------------------------------------------
+
+# 1. Gzip Compression (Reduce file size sent to browser)
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/x-javascript application/json application/xml
+</IfModule>
+
+# 2. Browser Caching (Speed up repeat visits)
+<IfModule mod_expires.c>
+  ExpiresActive On
+  
+  # Images (Cache for 1 year - they rarely change)
+  ExpiresByType image/jpg "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  
+  # CSS & JS (Cache for 1 month - versions handle updates)
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType text/javascript "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  
+  # Fonts
+  ExpiresByType application/font-woff "access plus 1 year"
+  ExpiresByType application/font-woff2 "access plus 1 year"
+</IfModule>

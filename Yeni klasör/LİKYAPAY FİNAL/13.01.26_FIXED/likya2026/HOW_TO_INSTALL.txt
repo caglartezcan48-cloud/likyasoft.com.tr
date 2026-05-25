@@ -1,0 +1,35 @@
+KURULUM REHBERİ (ARKADAŞIN İÇİN)
+=====================================
+
+Merhaba! Bu projeyi bilgisayarında çalıştırmak için aşağıdaki adımları izle:
+
+1. GEREKSİNİMLER
+   - Bilgisayarında XAMPP (veya WAMP/MAMP) kurulu olmalı.
+   - PHP 7.4 veya 8.x sürümü önerilir.
+
+2. DOSYALARI YERLEŞTİRME
+   - Bu klasörü (`likyapay`), XAMPP'ın kurulu olduğu yerdeki `htdocs` klasörünün içine kopyala.
+   - Örnek: `C:\xampp\htdocs\likyapay`
+
+3. VERİTABANI KURULUMU
+   - Tarayıcında `http://localhost/phpmyadmin` adresine git.
+   - Sol menüden "Yeni"ye tıkla ve `likyapay` adında bir veritabanı oluştur.
+   - Oluşturduğun bu veritabanına tıkla, üst menüden "İçe Aktar" (Import) sekmesine gel.
+   - Bu klasörün içindeki `likyapay_full_backup.sql` dosyasını seç ve "Git" (Go) butonuna bas.
+   - Veritabanı tabloları oluşacaktır.
+
+4. AYARLAR
+   - `core/config.php` dosyasını aç.
+   - Veritabanı bilgilerinin doğru olduğundan emin ol (Genelde XAMPP varsayılanı şöyledir):
+     define('DB_HOST', 'localhost');
+     define('DB_NAME', 'likyapay');
+     define('DB_USER', 'root');
+     define('DB_PASS', '');
+
+5. ÇALIŞTIRMA
+   - Tarayıcını aç ve `http://localhost/likyapay` adresine git.
+   - Giriş Bilgileri (Örnek):
+     E-posta: admin@likyapay.com
+     Şifre: 123456
+
+İyi çalışmalar!

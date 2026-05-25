@@ -1,0 +1,14 @@
+# 🚀 EKSİK DOSYA TAMAMLAMA (Çok Önemli)
+
+Admin panelindeki "404 Hatası" ve "Grafik Yüklenemedi" hatalarını çözmek için 2 küçük dosya daha yüklememiz lazım.
+
+## 1. Views Güncellemesi (Grafik Hatası İçin)
+1.  `DEPLOY_FIXES_20260108\views` içindeki **`home.php`** dosyasını, sunucudaki **`views`** klasörüne atıp **üzerine yazın.**
+
+## 2. API Dosyası Yükleme (404 Hatası İçin)
+1.  Sunucuda **`data`** klasörüne girin, sonra **`api`** klasörüne girin.
+2.  Bilgisayarınızdaki `DEPLOY_FIXES_20260108\data\api` klasörüne girin.
+3.  Oradaki **`system_accounting.php`** dosyasını sunucuya sürükleyip bırakın.
+
+**Neden Yapıyoruz?**
+Bu dosya (`system_accounting.php`) sunucuda eksik olduğu için admin paneli verileri çekemiyor ve sürekli hata veriyor. Bunu yükleyince grafikler ve veriler gelecek.

@@ -1,0 +1,14 @@
+# Sirius Test Kılavuzu
+
+Sirius Döngüsünü test etmek için otomatik bir senaryo hazırladım.
+
+1.  **test_sirius_setup.php** dosyasını ana dizine (htdocs/likyapay) veya sunucuya atın.
+2.  Tarayıcıdan çalıştırın: `.../test_sirius_setup.php`
+3.  Bu dosya şunları yapar:
+    *   3 adet test kullanıcısı oluşturur (Test A, B, C).
+    *   Bunlar arasında birbirine bağlı onaylı borçlar oluşturur (A->B->C->A).
+    *   Sirius motorunu tetikler.
+    *   Ekrana sonucu basar.
+
+Eğer "Döngü Bulundu" derse, sistem çalışıyor demektir.
+Sonrasında Admin panelinden "Sirius İşlemleri" menüsünden detayı görebilirsiniz.

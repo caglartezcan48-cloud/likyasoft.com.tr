@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Likya Pay | App Runner</title>
+
+    <!-- React & Dependencies -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/recharts/umd/Recharts.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff', 100: '#e0f2fe', 500: '#0ea5e9',
+                            600: '#0284c7', 700: '#0369a1', 900: '#0c4a6e',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <!-- MODULE IMPORTS (Path adjusted for root) -->
+    <script type="text/babel" src="views/frontend/sirius/algoritma.js"></script>
+    <script type="text/babel" src="views/frontend/anasayfa/ErrorBoundary.js"></script>
+    <script type="text/babel" src="views/frontend/anasayfa/Intro.js"></script>
+    <script type="text/babel" src="views/frontend/anasayfa/Dictionary.js"></script>
+    <script type="text/babel" src="views/frontend/anasayfa/InfoModal.js"></script>
+    <script type="text/babel" src="views/frontend/anasayfa/Navbar.js"></script>
+    <script type="text/babel" src="views/frontend/anasayfa/CycleAnimation.js"></script>
+    <script type="text/babel" src="views/frontend/anasayfa/LoginModal.js"></script>
+    <script type="text/babel" src="views/frontend/anasayfa/RegisterModal.js"></script>
+    <script type="text/babel" src="views/frontend/anasayfa/HeroSection.js"></script>
+    <script type="text/babel" src="views/frontend/anasayfa/Vizyon.js"></script>
+    <script type="text/babel" src="views/frontend/anasayfa/Footer.js"></script>
+    <script type="text/babel" src="views/frontend/anasayfa/HomePage.js"></script>
+
+    <script type="text/babel" src="views/frontend/admin/layout/Sidebar.js"></script>
+    <script type="text/babel" src="views/frontend/admin/layout/Topbar.js"></script>
+    <script type="text/babel" src="views/frontend/admin/layout/AdminLayout.js"></script>
+    <script type="text/babel" src="views/frontend/admin/pages/DashboardHome.js"></script>
+    <script type="text/babel" src="views/frontend/admin/pages/Approvals.js"></script>
+    <script type="text/babel" src="views/frontend/admin/pages/Users.js"></script>
+    <script type="text/babel" src="views/frontend/admin/pages/Accounting.js"></script>
+    <script type="text/babel" src="views/frontend/admin/pages/AdminUsers.js"></script>
+    <script type="text/babel" src="views/frontend/admin/pages/Reports.js"></script>
+    <script type="text/babel" src="views/frontend/admin/pages/GeneralSettings.js"></script>
+    <script type="text/babel" src="views/frontend/admin/pages/ContentManager.js"></script>
+    <script type="text/babel" src="views/frontend/admin/pages/SystemLogs.js"></script>
+    <script type="text/babel" src="views/frontend/admin/pages/Sirius.js"></script>
+    <script type="text/babel" src="views/frontend/admin/dashboard.js"></script>
+
+    <script type="text/babel" src="views/frontend/kullanicilar/Sidebar.js"></script>
+    <script type="text/babel" src="views/frontend/kullanicilar/DashboardHome.js"></script>
+    <script type="text/babel" src="views/frontend/kullanicilar/Invoices.js"></script>
+    <script type="text/babel" src="views/frontend/kullanicilar/Profile.js"></script>
+    <script type="text/babel" src="views/frontend/kullanicilar/Sirius.js"></script>
+    <script type="text/babel" src="views/frontend/kullanicilar/panel.js"></script>
+    <script type="text/babel" src="views/frontend/muhasebe/panel.js"></script>
+
+    <script type="text/babel" src="views/frontend/app.js"></script>
+
+    <script>
+        // Adjust fetch paths inside scripts if needed
+        // Since scripts use '../data/api', from root/run.app.html this would be /data/api
+        // This actually works perfectly if the server root is where run.app.html is.
+        console.log("LikyaPay Runner initialized.");
+    </script>
+</body>
+
+</html>

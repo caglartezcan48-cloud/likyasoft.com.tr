@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://fonts.gstatic.com https://fonts.googleapis.com https://images.unsplash.com; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://api.likyasoft.com.tr;">
+    
+    <!-- SEO Optimization -->
+    <title>Likya Soft | Fethiye Web Tasarım ve Yazılım Çözümleri</title>
+    <meta name="description" content="Fethiye'den tüm Türkiye'ye 7 günde teslim web sitesi. Yapay zeka destekli, SEO uyumlu, mobil öncelikli tasarım. Ücretsiz teklif al.">
+    <meta name="keywords" content="fethiye web tasarım, web yazılım fethiye, kurumsal web sitesi, seo fethiye, yapay zeka web">
+    <link rel="canonical" href="https://www.likyasoft.com.tr/" />
+
+    <!-- Performance: Preconnect to Font Servers -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="font" href="https://fonts.gstatic.com/s/plusjakartasans/v8/L0x8DFMnlVwD4h3br8QptnkRLKST_m7A.woff2" type="font/woff2" crossorigin>
+    <link rel="preload" as="font" href="https://fonts.gstatic.com/s/outfit/v11/Q_k79p9L9vV70tS9_Kwf9mS7O5_Z.woff2" type="font/woff2" crossorigin>
+
+    <!-- Performance: LCP Hero Preload (Optimized) -->
+    <!-- Performance: LCP Hero Preload (Optimized) -->
+    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&h=600&q=70&fm=webp" imagesrcset="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&h=600&q=70&fm=webp 1200w, https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=400&q=65&fm=webp 800w" imagesizes="(min-width: 1280px) 1200px, 100vw" fetchpriority="high">
+
+    <!-- Font Optimization with &display=swap -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    
+    <style>
+        /* Critical CSS - Reduction of Render Blocking */
+        :root { --primary: #1E40AF; --text-heading: #0f172a; --text-body: #1a202c; --bg: #f8fafc; --primary-dark: #1E40AF; }
+        body { margin:0; font-family: 'Plus Jakarta Sans', sans-serif; background: var(--bg); color: var(--text-body); -webkit-font-smoothing: antialiased; }
+        .hero-wrapper { min-height: 90vh; display: flex; align-items: center; }
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 2rem; }
+        h1 { font-family: 'Outfit', sans-serif; font-size: clamp(3rem, 5vw, 5.5rem); line-height: 0.95; font-weight: 800; color: var(--text-heading); }
+        .btn-fancy { background: var(--text-heading); color: white; padding: 1rem 2.5rem; border-radius: 100px; font-weight: 700; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    <!-- Performance: Defer JS execution -->
+    <script type="module" src="/src/main.jsx" defer></script>
+</body>
+</html>

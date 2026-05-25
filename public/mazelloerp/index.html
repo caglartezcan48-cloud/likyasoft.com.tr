@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <script>
+        // --- MAZELLO CONSOLE POLISH (EARLY INTERCEPT) ---
+        (function () {
+            const originalWarn = console.warn;
+            console.warn = function (...args) {
+                if (args[0] && (typeof args[0] === 'string') && (args[0].includes('cdn.tailwindcss.com') || args[0].includes('in-browser Babel transformer'))) return;
+                originalWarn.apply(console, args);
+            };
+        })();
+    </script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>MAZELLO | Professional Cloud ERP</title>
+
+    <!-- UI Foundation -->
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+
+    <!-- Core Engine -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/html5-qrcode"></script>
+    <script type="module" crossorigin src="assets/index-BRJCz15D.js"></script>
+    <link rel="stylesheet" crossorigin href="assets/index-BnZXNgDp.css">
+</head>
+
+<body>
+    <noscript>
+        <div style="padding:20px; text-align:center; color:red;">
+            <h1>Lütfen JavaScript'i Etkinleştirin</h1>
+            <p>Veya Google Chrome / Microsoft Edge gibi modern bir tarayıcı kullanın.</p>
+        </div>
+    </noscript>
+
+    <div id="root"></div>
+
+    <!-- VITE ENTRY POINT -->
+
+    <script>
+        // --- TURBO MODE: SERVICE WORKER REGISTRATION (0ms Caching) ---
+        if ('serviceWorker' in navigator && location.hostname !== 'localhost') {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('sw.js?v=25.5')
+                    .then(reg => console.log('%c🚀 MAZELLO TURBO: CALIBRATED', 'color: #22c55e; font-weight: bold;'))
+                    .catch(err => console.log('SW Error:', err));
+            });
+        }
+    </script>
+
+    <div style="position:fixed; bottom:0; right:0; font-size:10px; color:rgba(0,0,0,0.1); pointer-events:none;">
+        SYSTEM_ARMOURED_V24</div>
+</body>
+
+</html>
